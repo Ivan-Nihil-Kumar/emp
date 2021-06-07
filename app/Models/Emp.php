@@ -11,7 +11,11 @@ class Emp extends Model
 
     protected $fillable = [
 
-        'Employee_name', 'job_detail'
+        'Employee_name', 'Job_detail'
 
     ];
+
+    protected $primarykey = "id";
+
+    public $table ="emp";
 }

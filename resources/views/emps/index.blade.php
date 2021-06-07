@@ -96,7 +96,7 @@
 
   
 
-    {!! $emp->links() !!}
+    {!! $emps->links() !!}
 
       
 

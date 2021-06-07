@@ -126,4 +126,17 @@ class EmpController extends Controller
 
                         ->with('success','Employee Detail deleted successfully');
     }
+
+    public function getvalue($id)
+    {
+        $data =Emp::find($id);
+        return view('emps.edit',['data'=>$data]);
+
+    }
+
+    public function index2()
+    {
+        $employees = Emp::all();
+        return view('emps.edit', ['Employee_name' => $employees]);
+    }
 }

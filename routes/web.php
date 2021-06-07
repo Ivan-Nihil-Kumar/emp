@@ -17,3 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('emps','App\Http\Controllers\EmpController' );
+Route::get('emps/{id}','EmpController@getvalue');
+
+Route::get('emps/{id}','EmpController@index2);

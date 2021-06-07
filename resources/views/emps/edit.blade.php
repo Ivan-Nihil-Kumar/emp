@@ -48,11 +48,12 @@
 
   
 
-    <form action="{{ route('emps.update',$emp->id) }}" method="POST">
+    <<form method="POST" action="/data/{{ $data->id }}">
+            @method('PUT')>
 
         @csrf
 
-        @method('PUT')
+        @method('POST')
 
    
 
@@ -64,7 +65,7 @@
 
                     <strong>Employee Name:</strong>
 
-                    <input type="text" name="Employee_name" value="{{ $emp->name }}" class="form-control" placeholder="Name">
+                    <input type="text" name="Employee_name" value="{{$data['Employee_name']}}" class="form-control" placeholder="Name">
 
                 </div>
 
@@ -76,7 +77,7 @@
 
                     <strong>Job Detail:</strong>
 
-                    <input  type="text" name="Job_detail" class="form-control" placeholder="Detail" >{{ $emo->detail }}</input>
+                    <input  type="text" name="Job_detail" class="form-control" placeholder="Detail" >{{ $emp->detail }}</input>
 
                 </div>
 
